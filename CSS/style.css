@@ -1,0 +1,53 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body, html{
+    background: #000000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #434343, #000000);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #434343, #000000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding: 10px;
+}
+img{
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+.grid-wrapper > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-wrapper > div > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.grid-wrapper{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 250px;
+    grid-auto-flow: dense;
+}
+.grid-wrapper .dan2{
+    grid-row: span 2;
+    grid-column: span 3;
+}
+.grid-wrapper .row-span{
+    grid-row: span 2;
+}
+.grid-wrapper .blackhole{
+    grid-column: span 4;
+    grid-row: span 3;
+}
+.grid-wrapper .columns-span{
+    grid-column: span 2;
+}
+.grid-wrapper .earth{
+    grid-row: span 2;
+    grid-column: span 2;
+}
